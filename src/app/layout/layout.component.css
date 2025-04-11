@@ -1,0 +1,83 @@
+.heading{
+  font-family: 'Pacifico', cursive;
+
+}
+
+.designation{
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+  opacity: 0.5;
+}
+
+.columnne{
+  background-color: white;
+}
+.columnTwo{
+  background-color: white;
+}
+
+.profile{
+  margin-bottom: 150px;
+}
+
+.perInfo{
+  background-color: rgb(242,245,249);
+
+}
+
+.border-bottom border-dark{
+  opacity: 0.5;
+
+}
+
+
+.btn-download{
+  background: linear-gradient(135deg, rgb(255, 156, 26), rgb(232, 5, 5));
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5vh;
+  font-weight: bold;
+  color: white;
+
+}
+
+.navsection{
+  background-color: rgb(242,247,252);
+  border-radius: 15px;
+}
+
+.about{
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+.paragraph{
+  font-size:12px;
+}
+
+.head-name{
+  background: linear-gradient(135deg, rgb(255, 156, 26), rgb(232, 5, 5));
+}
+
+
+.Active-page :hover{
+    background: linear-gradient(135deg, rgb(255, 156, 26), rgb(232, 5, 5));
+
+}
+
+
+
+/* On mobile (up to 576px) */
+@media (max-width: 576px) {
+  nav a img {
+    width: 40px; /* Small size on mobile */
+    height: 40px;
+  }
+}
+
+/* On larger screens (576px and above) */
+@media (min-width: 577px) {
+  nav a img {
+    width: 65px; /* Slightly larger size on tablet/desktop */
+    height: 50px;
+  }
+}

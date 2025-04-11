@@ -1,0 +1,11 @@
+/* Global body font - Raleway */
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: rgb(242,245,249);
+}
+
+/* Headings and subtitles - Poppins */
+h1, h2, h3, h4, h5, h6,
+.subtitle, .heading {
+  font-family: 'Poppins', sans-serif;
+}
