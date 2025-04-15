@@ -42,51 +42,66 @@
         partnerships</b> and more so <b>mentorship.</b>
       </p>
 
-      <form (ngSubmit)="sendEmail()" #contactForm="ngForm" novalidate>
+      <form (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm" novalidate>
+
+        <!-- NAME -->
         <label>Name:</label>
-        <input type="text"
-               class="form-control border-0"
-               name="user_name"
-               [(ngModel)]="formData.user_name"
-               required
-               #name="ngModel">
-        <div *ngIf="name.invalid && name.touched" class="text-danger">
+        <input
+          type="text"
+          class="form-control border-0"
+          name="user_name"
+          [(ngModel)]="formData.user_name"
+          required
+          #name="ngModel"
+          [class.is-invalid]="name.invalid && (name.dirty || name.touched)"
+        />
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="text-danger small">
           Name is required.
         </div>
 
+        <!-- EMAIL -->
         <label>Email:</label>
-        <input type="email"
-               class="form-control border-0"
-               name="user_email"
-               [(ngModel)]="formData.user_email"
-               required
-               email
-               #email="ngModel">
-        <div *ngIf="email.invalid && email.touched" class="text-danger">
+        <input
+          type="email"
+          class="form-control border-0"
+          name="user_email"
+          [(ngModel)]="formData.user_email"
+          required
+          email
+          #email="ngModel"
+          [class.is-invalid]="email.invalid && (email.dirty || email.touched)"
+        />
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger small">
           <div *ngIf="email.errors?.['required']">Email is required.</div>
-          <div *ngIf="email.errors?.['email']">Invalid email format.</div>
+          <div *ngIf="email.errors?.['email']">Please enter a valid email.</div>
         </div>
 
-
+        <!-- MESSAGE -->
         <label>Message:</label>
-        <textarea class="form-control border-0"
-                  name="message"
-                  [(ngModel)]="formData.message"
-                  required
-                  #message="ngModel"></textarea>
-        <div *ngIf="message.invalid && message.touched" class="text-danger">
+        <textarea
+          class="form-control border-0"
+          name="message"
+          [(ngModel)]="formData.message"
+          required
+          #message="ngModel"
+          [class.is-invalid]="message.invalid && (message.dirty || message.touched)"
+        ></textarea>
+        <div *ngIf="message.invalid && (message.dirty || message.touched)" class="text-danger small">
           Message is required.
         </div>
 
-        <br>
-
-        <button type="submit"
-                [disabled]="contactForm.invalid"
-                style="border: none; border-radius: 15px;
-                       background: linear-gradient(135deg, rgb(255, 156, 26), rgb(232, 5, 5));
-                       color: white; padding: 8px 20px;">
-          Submit
+        <!-- SUBMIT -->
+        <br />
+        <button
+          type="submit"
+          [disabled]="contactForm.invalid || isSubmitting"
+          [style.opacity]="isSubmitting ? 0.6 : 1"
+          style="border: none; border-radius: 15px;
+                 background: linear-gradient(135deg, rgb(255, 156, 26), rgb(232, 5, 5));
+                 color: white; padding: 8px 20px;">
+          {{ isSubmitting ? 'Sending...' : 'Submit' }}
         </button>
       </form>
+
 
     </div>

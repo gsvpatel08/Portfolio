@@ -4,15 +4,16 @@
     <header class="heading d-flex justify-content-between align-items-center mt-4 px-3 flex-wrap">
       <span class="fw-bold" style="font-size: 2rem;">
         Venkatesha <span class="head">Gs</span>
+
       </span>
       <img src="./moon.svg" width="50" alt="moon">
     </header>
 
-    <!-- Nav Section -->
+    <!-- Nav Section
     <div class="row">
-      <div class="col-12 mt-3 d-flex justify-content-center">
-        <nav class="d-flex gap-4 p-3 justify-content-center align-items-center flex-wrap w-100"
-          style="border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); max-width: 700px;">
+      <div class="col-12 sticky-top  mt-3 d-flex justify-content-center">
+        <nav class="d-flex  gap-4 p-3 justify-content-center align-items-center flex-wrap w-100"
+          style="border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); max-width: 500px;">
           <a class="Active-page nav-icon-link" href="/home">
             <img src="./Home.svg" alt="home" class="nav-icon">
           </a>
@@ -27,8 +28,26 @@
           </a>
         </nav>
       </div>
+    </div> -->
+    <div class="row">
+      <div class="col-12 sticky-top  mt-3 d-flex justify-content-center">
+        <nav class="d-flex  gap-4 p-3 justify-content-center align-items-center flex-wrap w-100"
+          style="border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); max-width: 500px;">
+          <a class="Active-page nav-icon-link" [routerLink]="['/Home']" routerLinkActive="router-link-active">
+            <img src="./Home.svg" alt="home" class="nav-icon">
+          </a>
+          <a class="Active-page nav-icon-link" [routerLink]="['/resume']" routerLinkActive="router-link-active">
+            <img src="./Resume.svg" alt="resume" class="nav-icon">
+          </a>
+          <a class="Active-page nav-icon-link" [routerLink]="['/work']" routerLinkActive="router-link-active">
+            <img src="./work.svg" alt="work" class="nav-icon">
+          </a>
+          <a class="Active-page nav-icon-link" [routerLink]="['/contact']" routerLinkActive="router-link-active" >
+            <img src="./contact.svg" alt="contact" class="nav-icon">
+          </a>
+        </nav>
+      </div>
     </div>
-
     <!-- Main Content Section -->
     <div class="row gx-4 mt-4" style="display: flex; align-items: stretch;">
       <!-- Sidebar -->
