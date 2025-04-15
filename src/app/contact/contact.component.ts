@@ -7,7 +7,7 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Component({
   selector: 'app-contact',
-  imports: [FormsModule],
+  imports: [FormsModule,CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })

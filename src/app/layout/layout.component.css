@@ -66,18 +66,23 @@
 
 
 
-/* On mobile (up to 576px) */
+/* Style for nav icons */
+.nav-icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+/* Optional hover effect */
+.nav-icon:hover {
+  transform: scale(1.1);
+}
+
+/* On smaller screens, slightly reduce icon size */
 @media (max-width: 576px) {
-  nav a img {
-    width: 40px; /* Small size on mobile */
-    height: 40px;
+  .nav-icon {
+    width: 32px;
+    height: 32px;
   }
 }
 
-/* On larger screens (576px and above) */
-@media (min-width: 577px) {
-  nav a img {
-    width: 65px; /* Slightly larger size on tablet/desktop */
-    height: 50px;
-  }
-}

@@ -9,7 +9,7 @@ describe('LayoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LayoutComponent ,RouterOutlet]
+      imports: [LayoutComponent ]
     })
     .compileComponents();
 

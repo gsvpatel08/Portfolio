@@ -1,0 +1,5 @@
+@media (min-width: 992px) {
+  .main-content-box {
+    height: 700px !important;
+  }
+}

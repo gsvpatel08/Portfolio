@@ -10,42 +10,45 @@
 
     <!-- Nav Section -->
     <div class="row">
-      <div class="mt-3 d-flex justify-content-center">
-        <nav class="d-flex gap-4 p-2 justify-content-center align-items-center flex-wrap"
-          style="border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); max-width: 100%;">
-          <a class="Active-page" href="/home"><img src="./Home.svg" alt="home">  </a>
-          <a class="Active-page" href="/resume"><img src="./Resume.svg" alt="resume">  </a>
-          <a class="Active-page" href="/work"><img src="./work.svg" alt="work">  </a>
-          <a class="Active-page" href="/contact"><img src="./contact.svg" alt="Contact">  </a>
-
+      <div class="col-12 mt-3 d-flex justify-content-center">
+        <nav class="d-flex gap-4 p-3 justify-content-center align-items-center flex-wrap w-100"
+          style="border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); max-width: 700px;">
+          <a class="Active-page nav-icon-link" href="/home">
+            <img src="./Home.svg" alt="home" class="nav-icon">
+          </a>
+          <a class="Active-page nav-icon-link" href="/resume">
+            <img src="./Resume.svg" alt="resume" class="nav-icon">
+          </a>
+          <a class="Active-page nav-icon-link" href="/work">
+            <img src="./work.svg" alt="work" class="nav-icon">
+          </a>
+          <a class="Active-page nav-icon-link" href="/contact">
+            <img src="./contact.svg" alt="contact" class="nav-icon">
+          </a>
         </nav>
       </div>
     </div>
 
     <!-- Main Content Section -->
-    <div class="row d-flex mt-4 gx-4">
+    <div class="row gx-4 mt-4" style="display: flex; align-items: stretch;">
       <!-- Sidebar -->
-      <div class="col-12 col-lg-4 mb-4">
-        <div class="p-3 text-dark" style="border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);">
+      <div class="col-12 col-lg-4 d-flex">
+        <div class="p-3 text-dark flex-fill" style="border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);">
           <div class="d-flex justify-content-center mb-3">
             <img src="./profile.jpg" style="width: 150px; height: 150px;" class="rounded-circle border shadow" alt="profile">
           </div>
           <h4 class="text-center fw-bold">Venkatesha Gs</h4>
           <h6 class="designation text-center">FullStack Developer</h6>
-
-          <!-- Social Icons -->
           <div class="d-flex justify-content-center gap-2 my-3 flex-wrap">
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <img src="./Facebook.svg" alt="Facebook"> </a>
+              <img src="./Facebook.svg" alt="Facebook">
+            </a>
             <img src="./Linkedin.svg">
             <img src="./Twitter.svg">
             <img src="./Github.svg">
           </div>
 
-
-          <!-- Personal Info -->
           <div class="perInfo m-2 p-3">
-            <!-- Phone -->
             <div class="d-flex align-items-start mb-3 border-bottom">
               <img src="./Phone.svg" alt="Phone" class="me-3 mt-1">
               <div>
@@ -53,7 +56,6 @@
                 <small class="text-muted">7022354119</small>
               </div>
             </div>
-            <!-- Email -->
             <div class="d-flex align-items-start mb-3 border-bottom">
               <img src="./Email.svg" alt="Email" class="me-3 mt-1">
               <div>
@@ -61,7 +63,6 @@
                 <small class="text-muted">gsvpatel08gmail.com</small>
               </div>
             </div>
-            <!-- Location -->
             <div class="d-flex align-items-start mb-3 border-bottom">
               <img src="./Location.svg" alt="Location" class="me-3 mt-1">
               <div>
@@ -71,21 +72,21 @@
             </div>
             <div class="d-flex justify-content-center mt-4">
               <button (click)="downloadResume()"
-              class="btn btn-download d-flex justify-content-center align-items-center px-4"
-              style="border-radius: 20px; height: 44px;">
-        <i class="bi bi-download me-2" style="font-size: 15px;"></i>
-        Download Resume
-      </button>
-
+                class="btn btn-download d-flex justify-content-center align-items-center px-4"
+                style="border-radius: 20px; height: 44px;">
+                <i class="bi bi-download me-2" style="font-size: 15px;"></i>
+                Download Resume
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-    <!-- Main content dynamic -->
-      <div class="col-12 col-lg-8" >
-        <router-outlet></router-outlet>
+      <!-- Main content dynamic -->
+      <div class="col-12 col-lg-8 d-flex">
+        <!-- <div class="flex-fill" style="border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); padding: 20px;"> -->
+          <router-outlet></router-outlet>
+        </div>
       </div>
     </div>
   </div>
-</div>
